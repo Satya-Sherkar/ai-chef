@@ -6,10 +6,13 @@ import { generateRecipe } from "../../ai";
 export default function Home() {
   const [ingredients, setIngredients] = useState([]);
   const [recipe, setRecipe] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   async function getRecipe() {
+    setLoading(true);
     const recipeMarkdown = await generateRecipe(ingredients);
-    setRecipe(recipeMarkdown); 
+    setRecipe(recipeMarkdown);
+    setLoading(false);
   }
 
   function handleSubmit(formData) {
@@ -31,7 +34,13 @@ export default function Home() {
       {ingredients.length > 0 && (
         <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />
       )}
-      {recipe && <Recipe recipe={recipe} />}
+      {loading ? (
+        <div className="loader-container">
+          <div className="loader"></div>
+        </div>
+      ) : (
+        recipe && <Recipe recipe={recipe} />
+      )}
     </main>
   );
 }

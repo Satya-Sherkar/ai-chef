@@ -4,6 +4,7 @@ export default function IngredientsList(props) {
     return (
       <section className="ingredient-list">
         <h2>Ingredients on hand:</h2>
+        <h4>Add At least Four Ingredients to get a recipe</h4>
         <ul className="list-items">{ingredientEl}</ul>
         {props.ingredients.length > 3 && (
           <div className="get-recipe-container">
