@@ -1,16 +1,114 @@
-# React + Vite
+# ai-chef
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite application that provides personalized recipe recommendations to users using Gemini AI.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ai-chef is a minimal and fast React application powered by Vite for development and build efficiency. It leverages Gemini AI to deliver smart recipe suggestions based on user inputs, making meal planning easy and enjoyable.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Fast and efficient React app setup using Vite
+- Recipe recommendations powered by Gemini AI
+- Hot Module Replacement (HMR) for smooth developer experience
+- ESLint configured to maintain code quality
+- Lightweight and minimalistic design
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (JavaScript)
+- Vite (development and build tool)
+- Gemini AI (for recipe recommendation logic)
+- ESLint (code linting)
+- CSS and HTML for styling and markup
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 16 or higher recommended)
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository
+
+```
+
+git clone https://github.com/Satya-Sherkar/ai-chef.git
+
+```
+
+2. Navigate into the project directory
+
+```
+
+cd ai-chef
+
+```
+
+3. Install dependencies
+
+```
+
+npm install
+
+# or
+
+yarn install
+
+```
+
+### Running the Development Server
+
+To start the app in development mode with Hot Module Replacement:
+
+```
+
+npm run dev
+
+# or
+
+yarn dev
+
+```
+
+Open your browser and visit `http://localhost:5173` to use the app.
+
+## Usage
+
+- Enter your preferences or ingredients you have (At least 4)
+- Get AI-powered recipe recommendations instantly
+- Explore and try new recipes suggested by the app
+
+## ESLint Configuration
+
+ESLint is configured to enforce best practices and code quality. For production usage, it's recommended to extend the ESLint configuration with TypeScript support if needed.
+
+## Project Structure
+
+- `src/` - React components, AI integration logic, and styles
+- `public/` - Static assets and index.html
+- `vite.config.js` - Vite configuration file
+
+## Future Enhancements
+
+- Add user authentication for personalized recipe management
+- Improve UI/UX with advanced animations and voice interaction
+- Integrate more AI capabilities for nutrition and diet planning
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute, please fork the repository and submit a pull request.
+
+## License
+
+This project is open source and available under the MIT License.
+
+---
+
+Feel free to reach out if you have questions or suggestions.
+
+Happy cooking with ai-chef! 🍳
+
+
