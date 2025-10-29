@@ -136,3 +136,9 @@ section {
   align-items: center;
   height: 100px; /* Adjust height as needed */
 }
+
+.directions{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

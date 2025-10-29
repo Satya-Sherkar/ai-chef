@@ -31,8 +31,16 @@ export default function Home() {
         />
         <button>+ Add Ingredient</button>
       </form>
+      <div className="directions">
+        <h3>Add at least 4 ingredients</h3>
+      </div>
       {ingredients.length > 0 && (
-        <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />
+        <IngredientsList
+          ingredients={ingredients}
+          getRecipe={getRecipe}
+          loading={loading}
+          recipe={recipe}
+        />
       )}
       {loading ? (
         <div className="loader-container">
