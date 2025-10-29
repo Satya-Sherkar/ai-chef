@@ -1,12 +1,15 @@
 export default function IngredientsList(props) {
-    const ingredientEl = props.ingredients.map((ingredient) => <li>{ingredient}</li>);
+  const ingredientEl = props.ingredients.map((ingredient) => (
+    <li>{ingredient}</li>
+  ));
 
-    return (
-      <section className="ingredient-list">
-        <h2>Ingredients on hand:</h2>
-        <h4>Add At least Four Ingredients to get a recipe</h4>
-        <ul className="list-items">{ingredientEl}</ul>
-        {props.ingredients.length > 3 && (
+  return (
+    <section className="ingredient-list">
+      <h2>Ingredients on hand:</h2>
+      <ul className="list-items">{ingredientEl}</ul>
+      {props.ingredients.length > 3 &&
+        props.loading == false &&
+        props.recipe == false && (
           <div className="get-recipe-container">
             <div>
               <h3>Ready For a recipe?</h3>
@@ -15,6 +18,6 @@ export default function IngredientsList(props) {
             <button onClick={props.getRecipe}>Get a recipe</button>
           </div>
         )}
-      </section>
-    );
+    </section>
+  );
 }
